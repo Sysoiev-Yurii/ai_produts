@@ -1,3 +1,4 @@
+
 export enum AppView {
   DASHBOARD = 'DASHBOARD',
   AGENT = 'AGENT',
@@ -9,9 +10,9 @@ export enum AppView {
 }
 
 export interface ExchangeSettings {
-  usdBuyRate: number; // The rate to multiply USD by to get UAH (e.g., 41.5)
-  ronToUsdFactor: number; // Default 0.22 as requested
-  romanianDeliveryRate: number; // Fixed delivery cost in UAH for RO products
+  usdBuyRate: number; 
+  ronToUsdFactor: number; 
+  romanianDeliveryRate: number; 
 }
 
 export interface LaptopProduct {
@@ -47,6 +48,11 @@ export interface AgentConfig {
   status: 'active' | 'paused';
   lastRun?: string;
   description?: string;
+  keywords?: string[];
+  excludeKeywords?: string[];
+  minPrice?: number;
+  maxPrice?: number;
+  frequencyMinutes?: number;
 }
 
 export interface DatabaseItem {
@@ -67,12 +73,13 @@ export interface DatabaseItem {
   status: 'new' | 'updated' | 'stable' | 'deleted';
   lastChecked: string;
   inStock: boolean;
+  priceHistory?: { date: string; price: number }[];
 }
 
 export interface ReportItem {
   id: string;
   title: string;
   date: string;
-  type: 'PDF' | 'EXCEL' | 'TELEGRAM';
+  type: 'PDF' | 'EXCEL' | 'TELEGRAM' | 'CSV';
   size: string;
 }
