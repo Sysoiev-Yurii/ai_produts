@@ -6,7 +6,7 @@ export enum AppView {
   AGENTS_MANAGEMENT = 'AGENTS_MANAGEMENT',
   DATABASE = 'DATABASE',
   REPORTS = 'REPORTS',
-  DELIVERY = 'DELIVERY',
+  ADMIN_PANEL = 'ADMIN_PANEL',
 }
 
 export interface ExchangeSettings {

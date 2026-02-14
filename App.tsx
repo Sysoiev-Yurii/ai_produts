@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Menu } from 'lucide-react';
 import Sidebar from './components/Layout/Sidebar';
@@ -7,7 +8,7 @@ import SettingsView from './components/Views/SettingsView';
 import AgentsManagementView from './components/Views/AgentsManagementView';
 import DatabaseView from './components/Views/DatabaseView';
 import ReportsView from './components/Views/ReportsView';
-import DeliveryView from './components/Views/DeliveryView';
+import AdminPanelView from './components/Views/AdminPanelView';
 import { AppView, ExchangeSettings } from './types';
 
 const App: React.FC = () => {
@@ -33,8 +34,8 @@ const App: React.FC = () => {
         return <DatabaseView settings={settings} />;
       case AppView.REPORTS:
         return <ReportsView />;
-      case AppView.DELIVERY:
-        return <DeliveryView settings={settings} />;
+      case AppView.ADMIN_PANEL:
+        return <AdminPanelView />;
       case AppView.SETTINGS:
         return <SettingsView settings={settings} onUpdateSettings={setSettings} />;
       default:

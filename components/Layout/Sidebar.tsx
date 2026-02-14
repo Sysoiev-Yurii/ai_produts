@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { LayoutDashboard, Bot, Settings, Laptop2, Users, Database, FileText, Truck } from 'lucide-react';
+import { LayoutDashboard, Bot, Settings, Laptop2, Users, Database, FileText, ShieldAlert } from 'lucide-react';
 import { AppView } from '../../types';
 
 interface SidebarProps {
@@ -16,7 +17,7 @@ const Sidebar: React.FC<SidebarProps> = ({ currentView, onChangeView, isMobileMe
     { id: AppView.AGENTS_MANAGEMENT, label: 'Управление Агентами', icon: Users },
     { id: AppView.DATABASE, label: 'База Данных', icon: Database },
     { id: AppView.REPORTS, label: 'Отчеты', icon: FileText },
-    { id: AppView.DELIVERY, label: 'Доставка (RO)', icon: Truck },
+    { id: AppView.ADMIN_PANEL, label: 'Админ-панель', icon: ShieldAlert },
     { id: AppView.SETTINGS, label: 'Настройки', icon: Settings },
   ];
 
