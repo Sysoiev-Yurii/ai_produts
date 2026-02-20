@@ -1,6 +1,5 @@
 {
     "recommendations": [
-        "ms-vscode.vscode-node-azure-pack",
-        "ms-edgedevtools.vscode-edge-devtools"
+        "ms-vscode.vscode-node-azure-pack"
     ]
 }
